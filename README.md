@@ -1,0 +1,28 @@
+# traj_eval
+Matlab scripts to calculate the absolute and relative estimation errors. This repository is modified from [ntu_viral](https://github.com/ntu-aris/viral_eval).
+
+You can find the instruction for usage at [web page](https://ntu-aris.github.io/ntu_viral_dataset/evaluation_tutorial.html)
+
+## Prerequisite
+
+- Aerospace Toolbox (**quatmultiply()** required)
+- Navigation/Robotics System/UAV Toolbox (**rotm2quat()** required)
+- Statistics and Machine Learning Toolbox (**grp2idx()** required)
+
+
+
+## Welcome to try new support for multiple methods [evaluate_multi_methods](eval/evaluate_multi_methods.m)
+
+![](fig/eee_03.png)
+
+## Welcome to try new support with rpe [evaluate_one_method](eval/evaluate_one_method.m.m)
+
+![](fig/eval_one.png)
+
+## Welcome to try new support with rpe for multiple methods [evaluate_multi_methods](eval/evaluate_multi_methods.m)
+
+![](fig/eval_all.png)
+
+# Acknowledgement
+
+[daboxplot_demo](daboxplot_demo.m) and [daboxplot](daboxplot.m) by Povilas Karvelis <karvelis.povilas@gmail.com>
