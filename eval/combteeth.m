@@ -1,5 +1,6 @@
 function [p_idx, s_idx] = combteeth(ta, tb, dtmax)
-%UNTITLED Summary of this function goes here
+% dtmax is strongly related to the rate of groundtruth
+% as an example, if the rate is 5Hz, you should set dtmax >=0.2 (like 0.21)
 
 %   Detailed explanation goes here
 Ka  = length(ta);

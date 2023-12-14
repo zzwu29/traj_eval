@@ -21,7 +21,7 @@ fprintf('Number of methods: %d\n', length(methods));
 
 rpe_eval = true;
 
-trans_B2prism = [-0.243656,	 -0.012288,	 -0.328095];
+trans_B2prism = [-0.243656,	 -0.012288,	 -0.328095];   % valid with estimation with valid attitude
 
 evaluate_datasets_multi_methods()
 

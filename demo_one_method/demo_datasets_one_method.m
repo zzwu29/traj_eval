@@ -11,7 +11,7 @@ fprintf('Number of tests: %d\n', length(tests));
 
 rpe_eval = false;
 
-trans_B2prism = [-0.243656,	 -0.012288,	 -0.328095];
+trans_B2prism = [-0.243656,	 -0.012288,	 -0.328095];   % valid with estimation with valid attitude
 
 evaluate_datasets_one_method()
 

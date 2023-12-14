@@ -390,13 +390,12 @@ saveas(gcf, [exp_path exp_name '_xyz_err_t.fig']);
 img = getframe(gcf);
 imwrite(img.cdata, [exp_path exp_name '_xyz_err_t.png']);
 
-
+if rpe_eval == true
+    
 figpos = [0 0 0 0] + [fig_wid * 0.5, 100, fig_wid, 400];
 figure('position', figpos, 'color', 'w');
 fighd = [fighd gcf];
 hold on;
-
-if rpe_eval == true
 
 h = daboxplot(rpe_all,'groups',group_inx,'outliers',0,'xtlabels', condition_names,'fill',0,'legend',group_names,'colors',mymap);
 ylabel('Translation Error (m)');
