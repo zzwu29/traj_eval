@@ -1,4 +1,4 @@
-function P_est_ate_all_method = evaluate_multi_methods(test_id, test_fullname, num_methods,lgd_methods, trans_B2prism, rpe_eval)
+function P_est_ate_all_method = evaluate_multi_methods(test_id, test_fullname, num_methods,lgd_methods, trans_B2prism, gt_time_offset,rpe_eval)
 
 fig_wid = 550;
 
@@ -29,6 +29,8 @@ gndtr_pos_fn     = [exp_path 'leica_pose.csv'];
 
 % Position groundtr
 gndtr_pos_data = csvread(gndtr_pos_fn,  1, 0);
+
+gndtr_pos_data(:, 1) = gndtr_pos_data(:, 1) + gt_time_offset * 1e9;
 
 % First sample time used for offsetting all others
 t0_ns = gndtr_pos_data(1, 1);
@@ -123,8 +125,15 @@ for m=1:num_methods
     % Transform from body frame to the prism
 %     trans_B2prism = csvread(trans_B2prism_fn, 0, 0);
 
+    if size(trans_B2prism,1) == 1
+        trans_B2prism_m = trans_B2prism;
+    else
+        trans_B2prism_m = trans_B2prism(m,:);
+    end
+
     % Compensate the position estimate with the prism displacement
-    P_est = P_est + quatconv(Q_est, trans_B2prism);
+%     P_est = P_est + quatconv(Q_est, trans_B2prism);
+    P_est = P_est + quatconv(Q_est, trans_B2prism_m);
 
 
     %% Resample the ground truth data by estimate data sample times
@@ -132,7 +141,7 @@ for m=1:num_methods
     % Note affix rs[x] is for resampled by [x]
 
     % Find the interpolated time stamps
-    [rsest_pos_itp_idx(:, 1), rsest_pos_itp_idx(:, 2)] = combteeth(t_est, t, 0.1);
+    [rsest_pos_itp_idx(:, 1), rsest_pos_itp_idx(:, 2)] = combteeth(t_est, t, 0.22);
 
     % Remove the un-associatable samples
     rsest_nan_idx = find(isnan(rsest_pos_itp_idx(:, 1)) | isnan(rsest_pos_itp_idx(:, 2)));

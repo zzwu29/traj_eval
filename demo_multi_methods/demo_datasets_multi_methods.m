@@ -19,9 +19,14 @@ fprintf('Number of methods: %d\n', length(methods));
 
 %%
 
-rpe_eval = true;
+% trans_B2prism can be more than a line
+% the line num should be the same as method_count
 
 trans_B2prism = [-0.243656,	 -0.012288,	 -0.328095];   % valid with estimation with valid attitude
+
+gt_time_offset = 0.0;   % gt time offset
+
+rpe_eval = true;
 
 evaluate_datasets_multi_methods()
 

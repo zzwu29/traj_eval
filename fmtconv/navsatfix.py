@@ -1,4 +1,4 @@
-# convert fast-livo result file to the traj_eval input format
+# convert navsatfix file to the traj_eval input format
 # zongzhou.wu   Dec 14, 2023
 
 # rostopic echo -b file_name.bag -p NavSatFix_topic > gt.csv

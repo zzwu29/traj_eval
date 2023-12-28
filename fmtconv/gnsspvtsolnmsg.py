@@ -1,4 +1,4 @@
-# convert fast-livo result file to the traj_eval input format
+# convert gnsspvtsolnmsg file to the traj_eval input format
 # zongzhou.wu   Dec 14, 2023
 
 # ----- input format example -----
