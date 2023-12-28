@@ -9,7 +9,9 @@ You can find the instruction for usage at [web page](https://ntu-aris.github.io/
 - Navigation/Robotics System/UAV Toolbox (**rotm2quat()** required)
 - Statistics and Machine Learning Toolbox (**grp2idx()** required)
 
-
+## some demo
+- evaluate one method on different datasets, refer to (./demo_one_method/demo_datasets_one_method.m)
+- evaluate multiple methods on different datasets, refer to (./demo_multi_methods/demo_datasets_multi_methods.m)
 
 ## Welcome to try new support for multiple methods [evaluate_multi_methods](eval/evaluate_multi_methods.m)
 
