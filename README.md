@@ -9,9 +9,12 @@ You can find the instruction for usage at [web page](https://ntu-aris.github.io/
 - Navigation/Robotics System/UAV Toolbox (**rotm2quat()** required)
 - Statistics and Machine Learning Toolbox (**grp2idx()** required)
 
-## some demo
+## Some demo
 - evaluate one method on different datasets, refer [here](./demo_one_method/demo_datasets_one_method.m)
 - evaluate multiple methods on different datasets, refer [here](./demo_multi_methods/demo_datasets_multi_methods.m)
+
+## Format conversion for evaluation
+For converting the suitable format to process, you can edit your script just as those in [this directory](./fmtconv/).
 
 ## Welcome to try new support for multiple methods [evaluate_multi_methods](eval/evaluate_multi_methods.m)
 
