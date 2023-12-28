@@ -1,7 +1,7 @@
 # traj_eval
-Matlab scripts to calculate the absolute and relative estimation errors. This repository is modified from [ntu_viral](https://github.com/ntu-aris/viral_eval).
+Matlab scripts to calculate the absolute and relative estimation errors.
 
-You can find the instruction for usage at [web page](https://ntu-aris.github.io/ntu_viral_dataset/evaluation_tutorial.html)
+This repository is modified from [ntu_viral](https://github.com/ntu-aris/viral_eval). You can find the original instruction for usage at [web page](https://ntu-aris.github.io/ntu_viral_dataset/evaluation_tutorial.html)
 
 ## Prerequisite
 
