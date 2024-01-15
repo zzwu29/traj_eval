@@ -7,7 +7,7 @@ cd(this_dir);
 
 tests       = dir([this_dir 'result_*']);
 tests_count = length(tests);
-fprintf('Number of tests: %d\n', length(tests));
+fprintf('Number of datasets: %d\n', length(tests));
 
 rpe_eval = false;
 

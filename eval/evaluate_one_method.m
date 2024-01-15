@@ -150,7 +150,7 @@ P_est_ate     = norm(P_est_rmse);
 
 
 %% Print the result
-fprintf('Test%2d: %s. Err: P_est_ate: %.4f\n',...
+fprintf('Dataset%2d: %s. Err: P_est_ate: %.4f\n',...
           test_id, exp_name(8:end), P_est_ate);
 
 

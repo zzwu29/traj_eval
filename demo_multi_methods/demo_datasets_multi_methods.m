@@ -15,7 +15,7 @@ fprintf('Number of tests: %d\n', length(tests));
 %
 methods=["odom1", "odom2", "odom3"]; 
 method_count = length(methods);
-fprintf('Number of methods: %d\n', length(methods));
+fprintf('Number of datasets: %d\n', length(methods));
 
 %%
 
